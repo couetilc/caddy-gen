@@ -1,8 +1,14 @@
-# Version history
+# Changelog
 
-We follow Semantic Versions since the `0.1.0` release.
-We used to have incremental versioning before `0.1.0`.
+## Version 1.0.0
 
+- feat: added labels for adding directives to host and proxy blocks. Those are
+  `virtual.host.directives`, `virtual.host.import`, `virtual.proxy.matcher`,
+  `virtual.proxy.lb_policy`, `virtual.proxy.directives`, `virtual.proxy.import`
+- feat: added option to supply a custom template and snippet file to `docker-gen`
+  using environment variables CADDY_TEMPLATE and CADDY_SNIPPET.
+- chore: Update docker-gen to 0.7.5
+- chore: Update Caddy to 2.3.0
 
 ## Version 0.3.0
 

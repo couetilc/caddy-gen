@@ -1,6 +1,8 @@
 # caddy-gen
 
-[![Dockerhub](https://img.shields.io/docker/pulls/couetilc/caddy-gen.svg)](https://hub.docker.com/r/couetilc/caddy-gen/)
+[![Dockerhub](https://img.shields.io/docker/v/couetilc/caddy-gen?sort=semver)](https://hub.docker.com/r/couetilc/caddy-gen/)
+[![Dockerhub](https://img.shields.io/docker/image-size/couetilc/caddy-gen?sort=semver)](https://hub.docker.com/r/couetilc/caddy-gen/)
+[![Dockerhub](https://img.shields.io/docker/pulls/couetilc/caddy-gen)](https://hub.docker.com/r/couetilc/caddy-gen/)
 
 A perfect mix of [`Caddy`](https://github.com/mholt/caddy), [`docker-gen`](https://github.com/jwilder/docker-gen), and [`forego`](https://github.com/jwilder/forego). Inspired by [`nginx-proxy`](https://github.com/jwilder/nginx-proxy).
 
@@ -258,9 +260,6 @@ services:
 
 ## See also
 
-- Raw `Caddy` [image](https://github.com/wemake-services/caddy-docker)
-- [Django project template](https://github.com/wemake-services/wemake-django-template) with `Caddy`
-- Tool to limit your `docker` [image size](https://github.com/wemake-services/docker-image-size-limit)
 - [Original caddy-gen](https://github.com/wemake-services/caddy-gen)
 
 ## Changelog
