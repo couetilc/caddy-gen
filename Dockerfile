@@ -21,7 +21,7 @@ RUN apk update && apk upgrade \
   && rm "docker-gen-alpine-linux-amd64-${DOCKER_GEN_VERSION}.tar.gz" \
   && apk del .build-dependencies
 
-EXPOSE 80 443 2015
+EXPOSE 80 443
 VOLUME /etc/caddy
 
 # Starting app:
