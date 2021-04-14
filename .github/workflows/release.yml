@@ -22,7 +22,9 @@ jobs:
       - name: Run Tests
         run: |
           ./test/setup
+          sleep 2
           ./test/run
+          ./test/cleanup
 
       - name: Docker meta
         id: meta
