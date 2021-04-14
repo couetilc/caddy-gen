@@ -19,6 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Run Tests
+        run: |
+          ./test/setup
+          ./test/run
+
       - name: Docker meta
         id: meta
         uses: crazy-max/ghaction-docker-meta@v2

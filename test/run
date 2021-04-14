@@ -9,9 +9,6 @@ docker ps | grep -q caddy-gen
 # test availability and status code
 curl 127.0.0.1:80
 
-# test image size (see wemake-services/docker-image-size-limit)
-disl caddy-gen:latest 90MB
-
 # test feature CADDY_TEMPLATE
 printf 'http://test-template.localhost {\n  respond "template"\n}\n' > template.tmpl
 docker cp template.tmpl caddy-gen:/tmp/template.tmpl
