@@ -1,10 +1,6 @@
 # caddy-gen
 
-[![wemake.services](https://img.shields.io/badge/-wemake.services-green.svg?label=%20&logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC%2FxhBQAAAAFzUkdCAK7OHOkAAAAbUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP%2F%2F%2F5TvxDIAAAAIdFJOUwAjRA8xXANAL%2Bv0SAAAADNJREFUGNNjYCAIOJjRBdBFWMkVQeGzcHAwksJnAPPZGOGAASzPzAEHEGVsLExQwE7YswCb7AFZSF3bbAAAAABJRU5ErkJggg%3D%3D)](https://wemake.services)
-[![Build Status](https://travis-ci.com/wemake-services/caddy-gen.svg?branch=master)](https://travis-ci.com/wemake-services/caddy-gen)
-[![Dockerhub](https://img.shields.io/docker/pulls/wemakeservices/caddy-gen.svg)](https://hub.docker.com/r/wemakeservices/caddy-gen/)
-[![image size](https://images.microbadger.com/badges/image/wemakeservices/caddy-gen.svg)](https://microbadger.com/images/wemakeservices/caddy-gen)
-[![caddy's version](https://img.shields.io/badge/version-0.10.12-blue.svg)](https://github.com/mholt/caddy/tree/v0.10.12)
+[![Dockerhub](https://img.shields.io/docker/pulls/couetilc/caddy-gen.svg)](https://hub.docker.com/r/couetilc/caddy-gen/)
 
 A perfect mix of [`Caddy`](https://github.com/mholt/caddy), [`docker-gen`](https://github.com/jwilder/docker-gen), and [`forego`](https://github.com/jwilder/forego). Inspired by [`nginx-proxy`](https://github.com/jwilder/nginx-proxy).
 
@@ -25,8 +21,6 @@ Now scaling is easy!
 The main idea is simple.
 Every labeled service exposes a `virtual.host` to be handled.
 Then, every container represents a single `upstream` to serve requests.
-
-NOTE: Caddy2 was introduced in [version 0.3.0](https://github.com/wemake-services/caddy-gen/releases/tag/0.3.0) causing BREAKING CHANGES.
 
 Main configuration options:
 
@@ -78,7 +72,7 @@ version: "3"
 services:
   caddy-gen:
     container_name: caddy-gen
-    image: "wemakeservices/caddy-gen:latest"
+    image: "couetilc/caddy-gen:latest"
     restart: always
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro # needs socket to read events
@@ -101,7 +95,7 @@ services:
       - "virtual.auth.password=JDJ5JDEyJEJCdzJYM0pZaWtMUTR4UVBjTnRoUmVJeXQuOC84QTdMNi9ONnNlbDVRcHltbjV3ME1pd2pLCg==" # By specifying both username and password hash
 ```
 
-See [`docker-compose.yml`](https://github.com/wemake-services/caddy-gen/blob/master/example/docker-compose.yml) example file.
+See [`docker-compose.yml`](https://github.com/couetilc/caddy-gen/blob/master/example/docker-compose.yml) example file.
 
 ### Backing up certificates
 
@@ -123,7 +117,7 @@ of the original incoming value. See [Headers](https://caddyserver.com/docs/caddy
 version: "3"
 services:
   caddy-gen:
-    image: "wemakeservices/caddy-gen:latest"
+    image: "couetilc/caddy-gen:latest"
     restart: always
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro # needs socket to read events
@@ -154,7 +148,7 @@ and only requests to `/api/*` will be routed to the whoami service.  See
 version: "3"
 services:
   caddy-gen:
-    image: "wemakeservices/caddy-gen:latest"
+    image: "couetilc/caddy-gen:latest"
     restart: always
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro # needs socket to read events
@@ -267,11 +261,12 @@ services:
 - Raw `Caddy` [image](https://github.com/wemake-services/caddy-docker)
 - [Django project template](https://github.com/wemake-services/wemake-django-template) with `Caddy`
 - Tool to limit your `docker` [image size](https://github.com/wemake-services/docker-image-size-limit)
+- [Original caddy-gen](https://github.com/wemake-services/caddy-gen)
 
 ## Changelog
 
-Full changelog is available [here](https://github.com/wemake-services/caddy-gen/blob/master/CHANGELOG.md).
+Full changelog is available [here](https://github.com/couetilc/caddy-gen/blob/master/CHANGELOG.md).
 
 ## License
 
-MIT. See [LICENSE](https://github.com/wemake-services/caddy-gen/blob/master/LICENSE) for more details.
+MIT. See [LICENSE](https://github.com/couetilc/caddy-gen/blob/master/LICENSE) for more details.
