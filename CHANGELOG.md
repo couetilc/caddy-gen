@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 1.0.1
+
+- fix: do not expose port 2015
+
 ## Version 1.0.0
 
 - feat: added labels for adding directives to host and proxy blocks. Those are
