@@ -1,5 +1,6 @@
 # caddy-gen
 
+![build status](https://img.shields.io/github/workflow/status/couetilc/caddy-gen/release/master)
 [![Dockerhub](https://img.shields.io/docker/v/couetilc/caddy-gen?sort=semver)](https://hub.docker.com/r/couetilc/caddy-gen/)
 [![Dockerhub](https://img.shields.io/docker/image-size/couetilc/caddy-gen?sort=semver)](https://hub.docker.com/r/couetilc/caddy-gen/)
 [![Dockerhub](https://img.shields.io/docker/pulls/couetilc/caddy-gen)](https://hub.docker.com/r/couetilc/caddy-gen/)
