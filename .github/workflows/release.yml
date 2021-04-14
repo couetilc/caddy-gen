@@ -1,4 +1,4 @@
-name: release to Dockerhub and GHCR
+name: release
 
 on:
   push:
