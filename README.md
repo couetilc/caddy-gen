@@ -1,6 +1,6 @@
 # caddy-gen
 
-![build status](https://img.shields.io/github/workflow/status/couetilc/caddy-gen/release/master)
+![build status](https://img.shields.io/github/workflow/status/couetilc/caddy-gen/release/main)
 [![Dockerhub](https://img.shields.io/docker/v/couetilc/caddy-gen?sort=semver)](https://hub.docker.com/r/couetilc/caddy-gen/)
 [![Dockerhub](https://img.shields.io/docker/image-size/couetilc/caddy-gen?sort=semver)](https://hub.docker.com/r/couetilc/caddy-gen/)
 [![Dockerhub](https://img.shields.io/docker/pulls/couetilc/caddy-gen)](https://hub.docker.com/r/couetilc/caddy-gen/)
@@ -98,7 +98,7 @@ services:
       - "virtual.auth.password=JDJ5JDEyJEJCdzJYM0pZaWtMUTR4UVBjTnRoUmVJeXQuOC84QTdMNi9ONnNlbDVRcHltbjV3ME1pd2pLCg==" # By specifying both username and password hash
 ```
 
-See [`docker-compose.yml`](https://github.com/couetilc/caddy-gen/blob/master/example/docker-compose.yml) example file.
+See [`docker-compose.yml`](https://github.com/couetilc/caddy-gen/blob/main/example/docker-compose.yml) example file.
 
 ### Backing up certificates
 
@@ -265,8 +265,8 @@ services:
 
 ## Changelog
 
-Full changelog is available [here](https://github.com/couetilc/caddy-gen/blob/master/CHANGELOG.md).
+Full changelog is available [here](https://github.com/couetilc/caddy-gen/blob/main/CHANGELOG.md).
 
 ## License
 
-MIT. See [LICENSE](https://github.com/couetilc/caddy-gen/blob/master/LICENSE) for more details.
+MIT. See [LICENSE](https://github.com/couetilc/caddy-gen/blob/main/LICENSE) for more details.
