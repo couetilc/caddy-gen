@@ -5,4 +5,10 @@ set -o xtrace
 
 # Building image itself:
 docker build -t caddy-gen:latest .
-docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro --name caddy-gen caddy-gen
+docker run \
+  -d \
+  -p 80:80 \
+  -v /var/run/docker.sock:/tmp/docker.sock:ro \
+  --label virtual.host=127.0.0.1:80 \
+  --label virtual.host.directives="respond pong" \
+  --name caddy-gen caddy-gen
