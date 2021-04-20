@@ -1,17 +1,5 @@
 {{ $hosts := groupByLabel $ "virtual.host" }}
 
-{{ if not $hosts }}
-
-127.0.0.1:80 {
-  respond "pong"
-  log {
-      output stdout
-  }
-}
-
-
-{{ else }}
-
 {{ range $h, $containers := $hosts }}
 {{ $c := first $containers }}
 {{ $allhosts := trim (index $c.Labels "virtual.host") }}
@@ -70,6 +58,4 @@
   }
 }
 {{ end }}
-{{ end }}
-
 {{ end }}

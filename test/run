@@ -7,9 +7,7 @@ set -o xtrace
 docker ps | grep -q caddy-gen
 
 # test availability and status code
-docker exec caddy-gen sh -c 'sh /code/docker-entrypoint.sh'
-sleep 2
-test "$(curl -s 127.0.0.1:80)" = 'pong'
+# TODO test virtual.host label feature
 
 # test feature CADDY_TEMPLATE
 docker exec caddy-gen sh -c "printf 'http://test-template.localhost {\nrespond \"template\"\n}\n' > /tmp/template.tmpl"
